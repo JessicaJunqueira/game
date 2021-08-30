@@ -1,0 +1,211 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+main {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 10px;
+    width: 100vw;
+}
+
+.perfect-center {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.night-mode-transition {
+    transition: 1s;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.game {
+    align-items: center;
+    background-color:black;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vw;
+    justify-content: space-around;
+    margin: auto;
+    padding: 1.5%;
+    position: relative;
+    width: 50vw;
+}
+
+.clickable {
+    height: 45%;
+    opacity: 0.25;
+    transition: 0.75s;
+    width: 45%;
+}
+
+.top-left.round-corner {
+    border-radius: 100% 5px 5px;
+}
+
+.top-right.round-corner {
+    border-radius: 5px 100% 5px 5px;
+}
+
+.bottom-left.round-corner {
+    border-radius: 5px 5px 5px 100%;
+}
+
+.bottom-right.round-corner {
+    border-radius: 5px 5px 100% 5px;
+}
+
+.control-container {
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+
+.control {
+    background-color: deeppink;
+    border-radius: 100px;
+    cursor: pointer;
+    height: 25%;
+    margin: 5px 0;
+    position: relative;
+    width: 25%;
+}
+
+.control .background {
+    background-color: lightpink;
+    border-radius: 100px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 80%;
+    pointer-events: initial;
+    position: absolute;
+    width: 80%;
+}
+
+.control p {
+    pointer-events: none;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.hover {
+    opacity: 0.5;
+}
+
+.active {
+    opacity: 1;
+}
+
+.hud {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    width: 50vw;
+}
+
+.hud div {
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin: 0 1vw;
+    padding: 15px;
+}
+
+.score, .high-score {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+}
+
+footer p, footer a {
+    text-align: center;
+    width: 100vw;
+}
+
+/* Typography */
+
+.control p, .hud div p {
+    font-size: 0.55rem;
+}
+
+
+#red {
+    background-color: red;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+@media (min-width: 768px) {
+    .control p, .hud div p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        align-items: center;
+        display: flex;
+        height: 90vh;
+        justify-content: center;
+    }
+
+    .game {
+        height: 40vw;
+        margin: 0 35px 0 0;
+        width: 40vw;
+    }
+
+    .control p, .hud div p {
+        font-size: 0.9rem;
+    }
+
+    .hud {
+        align-items: center;
+        flex-direction: column;
+        margin: 0 0 0 35px;
+        justify-content: space-around;
+        width: 250px;
+    }
+
+    .hud div {
+        margin: 60px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .control p, .hud div p {
+        font-size: 1.1rem;
+    }
+}
